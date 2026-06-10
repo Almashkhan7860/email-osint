@@ -17,6 +17,7 @@ pkg install python git -y
 git clone [https://github.com/Almashkhan7860/email-osint.git](https://github.com/Almashkhan7860/email-osint.git)
 cd email-osint
 pip install holehe
+pip install requests colorama
 python main.py
 
 
@@ -27,6 +28,7 @@ sudo apt update && sudo apt install python3 python3-pip git -y
 git clone [https://github.com/Almashkhan7860/email-osint.git](https://github.com/Almashkhan7860/email-osint.git)
 cd email-osint
 pip3 install holehe
+pip install requests colorama
 python3 main.py
 
 
@@ -36,6 +38,7 @@ Note: Python and Git must already be installed on Windows.Then, copy this:
 git clone [https://github.com/Almashkhan7860/email-osint.git](https://github.com/Almashkhan7860/email-osint.git)
 cd email-osint
 pip install holehe
+pip install requests colorama
 python main.py
 
 ## 🍏 For macOS
@@ -44,5 +47,12 @@ Copy the code below to run it in the Mac Terminal:
 git clone [https://github.com/Almashkhan7860/email-osint.git](https://github.com/Almashkhan7860/email-osint.git)
 cd email-osint
 pip3 install holehe
+pip install requests colorama
 python3 main.py
 
+
+
+## 😺 GUI Interface
+pip install streamlit
+streamlit run gui.py --server.port 8080
+Then open http://localhost:8080 in your browser. from
