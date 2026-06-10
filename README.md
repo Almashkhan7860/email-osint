@@ -7,9 +7,10 @@ This is a simple Python-based OSINT tool that attempts to check for digital foot
 * Easy to use (CLI-based).
 * Works directly without any third-party API keys.
 
-## 📱 How to Run in Termux
+## 🚀 How to Run 🧑🏻‍💻
 
 ```bash
+## 📱 For Android/Termux 
 pkg install python git -y
 git clone [https://github.com/Almashkhan7860/email-osint.git](https://github.com/Almashkhan7860/email-osint.git)
 cd email-osint
