@@ -1,4 +1,4 @@
-# Email OSINT Tool 🔍
+# USERNAME OSINT Tool 🔍
 
 This is an extremely powerful, multi-featured, and professional Python-based OSINT tool that tracks usernames across more than 32 global platforms (including social media, coding, gaming, and blogs) simultaneously.
 
