@@ -1,4 +1,5 @@
 import requests
+import time
 from colorama import Fore, Style, init
 
 # Initialize colorama
@@ -25,25 +26,34 @@ def lookup_username(username):
         "TikTok": f"https://www.tiktok.com/@{username}"
     }
 
+    # Advanced headers to look like a real browser
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.5"
     }
 
     found_count = 0
 
     for name, url in websites.items():
         try:
-            # Checking if the URL is valid/exists
-            response = requests.get(url, headers=headers, timeout=5, allow_redirects=False)
+            # 1 second delay to prevent security blocking
+            time.sleep(1)
+            
+            response = requests.get(url, headers=headers, timeout=6, allow_redirects=False)
             
             if response.status_code == 200:
                 print(f"📌 {Fore.GREEN + name:<18} | {Fore.GREEN}🟢 FOUND       {Style.RESET_ALL} | {Fore.LIGHTBLUE_EX + url}")
                 found_count += 1
+            elif response.status_code in [403, 429]:
+                print(f"🔒 {Fore.YELLOW + name:<18} | {Fore.YELLOW}🟡 BLOCKED     {Style.RESET_ALL} | - (Protected by Site)")
             else:
                 print(f"❌ {Fore.RED + name:<18} | {Fore.RED}🔴 NOT FOUND   {Style.RESET_ALL} | {Fore.WHITE + url}")
                 
+        except requests.exceptions.Timeout:
+            print(f"⏳ {Fore.YELLOW + name:<18} | {Fore.YELLOW}🟡 TIMEOUT     {Style.RESET_ALL} | - (Slow Connection)")
         except requests.exceptions.RequestException:
-            print(f"⚠️ {Fore.YELLOW + name:<18} | {Fore.YELLOW}🟡 ERROR       {Style.RESET_ALL} | -")
+            print(f"🛑 {Fore.RED + name:<18} | {Fore.RED}🔴 CONN ERROR  {Style.RESET_ALL} | -")
 
     print(Style.BRIGHT + "-" * 85)
     print(Fore.CYAN + f"\n[+] Search completed! Total {found_count} profiles identified.")
