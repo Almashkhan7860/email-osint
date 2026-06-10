@@ -1,12 +1,14 @@
 # Email OSINT Tool 🔍
 
-This is a simple Python-based OSINT tool that attempts to check for digital footprints across various social media platforms using an email address.
+This is an extremely powerful, multi-featured, and professional Python-based OSINT tool that tracks usernames across more than 32 global platforms (including social media, coding, gaming, and blogs) simultaneously.
 
 ## 🛠️ Features
-* Completely free and open-source.
-* Easy to use (CLI-based).
-* Works directly without any third-party API keys.
-
+* **Interactive CLI Menu:** An elegant menu system for easy navigation.
+* **32+ Global Platforms:** Real-time checking across social media, coding profiles, and gaming networks.
+* **Batch Scanning Support:** Ability to scan multiple usernames at once (comma-separated).
+* **Auto-Save Feature:** Links to all active profiles are automatically saved to `results.txt`.
+* **Anti-Blocking System:** Automatic delay logic to prevent requests from being blocked.
+* 
 ## 🚀 How to Run 🧑🏻‍💻
 
 ```bash
