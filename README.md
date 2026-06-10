@@ -1,13 +1,13 @@
 # Email OSINT Tool 🔍
 
-यह एक सिंपल पायथन-आधारित OSINT टूल है जो ईमेल आईडी का उपयोग करके विभिन्न सोशल मीडिया प्लेटफॉर्म्स पर डिजिटल फुटप्रिंट्स की जांच करने की कोशिश करता है।
+This is a simple Python-based OSINT tool that attempts to check for digital footprints across various social media platforms using an email address.
 
-## 🛠️ विशेषताएं (Features)
-* पूरी तरह से मुफ्त और ओपन-सोर्स।
-* उपयोग करने में आसान (CLI आधारित)।
-* बिना किसी थर्ड-पार्टी API Key के सीधे काम करता है।
+## 🛠️ Features
+* Completely free and open-source.
+* Easy to use (CLI-based).
+* Works directly without any third-party API keys.
 
-## 🚀 टर्मक्स में कैसे चलाएं (How to Install & Run)
+## 🚀 How to Run in Termux
 
 ```bash
 pkg install python git -y
